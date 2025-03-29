@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate AI Prompt Library | Content Creator & Digital Marketing Edition</title>
+    <meta name="description" content="Professional AI prompt library with 100+ high-converting prompts for content creators and digital marketers.">
+    <meta property="og:title" content="Ultimate AI Prompt Library">
+    <meta property="og:description" content="Premium AI prompt collection for content creators and digital marketers to save time and boost results.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8cGF0aCBkPSJNMCAwIEw0MCAwIEw0MCA0MCBMMCA0MCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYxMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz4KPC9zdmc+');
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .header-cta {
+            margin-top: 2rem;
+        }
+        
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: white;
+            color: var(--primary);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #f8fafc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .search-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+            top: -3rem;
+            margin-bottom: 0;
+        }
+        
+        .search-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .filter-select {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            font-size: 1rem;
+            min-width: 200px;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .section-description {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+        
+        .prompt-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .prompt-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .prompt-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .prompt-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .prompt-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .prompt-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--primary-dark);
+        }
+        
+        .prompt-category {
+            background-color: var(--gray-light);
+            color: var(--gray);
+            font-size: 0.85rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .prompt-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        
+        .prompt-stats {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        .prompt-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .prompt-lock {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: var(--gray);
+            opacity: 0.7;
+        }
+        
+        .prompt-premium {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(45deg, #f59e0b, #d97706);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .prompt-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .prompt-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        
+        .modal-category {
+            background-color: var(--gray-light);
+            color: var(--gray);
+            font-size: 0.9rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .prompt-text {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            white-space: pre-wrap;
+            font-family: monospace;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        .parameter-form {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .button-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .button-primary:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .button-secondary {
+            background-color: var(--gray-light);
+            color: var(--gray);
+        }
+        
+        .button-secondary:hover {
+            background-color: #cbd5e1;
+        }
+        
+        .button-premium {
+            background: linear-gradient(45deg, #f59e0b, #d97706);
+            color: white;
+        }
+        
+        .button-premium:hover {
+            background: linear-gradient(45deg, #d97706, #b45309);
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .tab {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--gray);
+            cursor: pointer;
+            transition: color 0.2s;
+            position: relative;
+        }
+        
+        .tab.active {
+            color: var(--primary);
+        }
+        
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .success-message {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #10b981;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.3s;
+            z-index: 1000;
+        }
+        
+        .success-message.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .login-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .login-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .login-content {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .login-form {
+            margin-top: 1.5rem;
+        }
+        
+        .login-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .login-option {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .login-option:hover {
+            background-color: #f8fafc;
+            border-color: var(--primary);
+        }
+        
+        .pricing-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .pricing-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .pricing-description {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background-color: #f8fafc;
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--gray-light);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+        }
+        
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+        
+        .pricing-period {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: normal;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+        
+        .pricing-feature {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-light);
+            font-size: 0.95rem;
+        }
+        
+        .pricing-feature:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-cta {
+            margin-top: auto;
+        }
+        
+        .faq-section {
+            margin-top: 4rem;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .faq-answer {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        .testimonial-section {
+            margin-top: 4rem;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            margin-right: 1rem;
+            overflow: hidden;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info {
+            flex: 1;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .testimonial-title {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8cGF0aCBkPSJNMCAwIEw0MCAwIEw0MCA0MCBMMCA0MCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYxMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz4KPC9zdmc+');
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .cta-description {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid var(--gray-light);
+        }
+        
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-link {
+            color: var(--gray);
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            color: var(--primary);
+        }
+        
+        .credit {
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .prompt-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .search-input, .filter-select {
+                width: 100%;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .header-buttons {
+                flex-direction: column;
+            }
+            
+            .pricing-grid, .testimonial-grid, .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Loading indicator */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--gray-light);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Added for premium features */
+        .premium-lock {
+            margin-right: 0.5rem;
+            color: #f59e0b;
+        }
+        
+        .premium-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .prompt-card.premium:hover .premium-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <h1>Ultimate AI Prompt Library</h1>
+            <p class="subtitle">Content Creator & Digital Marketing Edition</p>
+            <div class="header-cta">
+                <p>200+ Expert-Crafted Prompts to Automate Your Content Creation & Marketing</p>
+                <div class="header-buttons">
+                    <a href="#pricing" class="btn btn-primary">Get Premium Access</a>
+                    <a href="#features" class="btn btn-secondary">Explore Features</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search prompts..." id="searchInput">
+            <select class="filter-select" id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="content-creation">Content Creation</option>
+                <option value="strategy">Content Strategy & Calendar</option>
+                <option value="copywriting">Copywriting & Conversion</option>
+                <option value="marketing">Digital Marketing Strategy</option>
+                <option value="analysis">Data Analysis & Optimization</option>
+                <option value="visual">Creative & Visual Content</option>
+                <option value="ai-visual">AI Visual Prompts</option>
+                <option value="automation">AI Workflow Automation</option>
+                <option value="targeting">Advanced Targeting & Optimization</option>
+                <option value="sales">Sales & Lead Generation</option>
+                <option value="business">Business Growth & Strategy</option>
+                <option value="branding">Personal Branding & Thought Leadership</option>
+            </select>
+        </div>
+        
+        <section id="features">
+            <h2 class="section-title">Unlock the Power of AI for Your Content & Marketing</h2>
+            <p class="section-description">Browse our collection of expert-crafted prompts designed specifically for content creators, marketers, and business owners. Save hours of work and get better results with optimized AI prompts.</p>
+            
+            <div class="prompt-grid" id="promptGrid">
+                <!-- Prompt cards will be dynamically generated here -->
+            </div>
+        </section>
+        
+        <section id="pricing" class="pricing-section">
+            <h2 class="pricing-title">Choose Your Plan</h2>
+            <p class="pricing-description">Get access to our premium AI prompt library and start creating high-performing content in minutes.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Free</div>
+                    <div class="pricing-price">$0 <span class="pricing-period">forever</span></div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">Access to 20+ free prompts</li>
+                        <li class="pricing-feature">Basic customization</li>
+                        <li class="pricing-feature">Copy to clipboard functionality</li>
+                        <li class="pricing-feature">Limited categories</li>
+                        <li class="pricing-feature">Community support</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <button class="btn btn-secondary" style="width: 100%;">Current Plan</button>
+                    </div>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-name">Premium</div>
+                    <div class="pricing-price">$47 <span class="pricing-period">/month</span></div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">Access to 200+ premium prompts</li>
+                        <li class="pricing-feature">Advanced customization</li>
+                        <li class="pricing-feature">AI prompt generator</li>
+                        <li class="pricing-feature">Export to PDF/Word</li>
+                        <li class="pricing-feature">Personal prompt library</li>
+                        <li class="pricing-feature">Monthly new prompts</li>
+                        <li class="pricing-feature">Priority support</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <button class="btn btn-primary" id="upgradePremium" style="width: 100%;">Upgrade Now</button>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-name">Agency</div>
+                    <div class="pricing-price">$197 <span class="pricing-period">/month</span></div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">Everything in Premium</li>
+                        <li class="pricing-feature">Team access (5 users)</li>
+                        <li class="pricing-feature">White-label exports</li>
+                        <li class="pricing-feature">Custom prompt creation</li>
+                        <li class="pricing-feature">API access</li>
+                        <li class="pricing-feature">Advanced analytics</li>
+                        <li class="pricing-feature">Dedicated support</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <button class="btn btn-primary" id="upgradeAgency" style="width: 100%;">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonial-section">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"This prompt library has transformed my content creation process. I'm creating better content in half the time. The ROI on this investment was immediate."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Sarah Johnson</div>
+                            <div class="testimonial-title">Content Marketing Manager</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"As a solopreneur, I was struggling to keep up with content creation. These prompts have become my secret weapon. My engagement has increased by 137% in just a month!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Chen">
+                        </div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">David Chen</div>
+                            <div class="testimonial-title">E-commerce Founder</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Our agency manages content for over 20 clients. This library has become our go-to resource for creating consistent, high-quality content across all platforms."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Martinez">
+                        </div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Jessica Martinez</div>
+                            <div class="testimonial-title">Digital Agency Owner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">What is an AI prompt library?</h3>
+                    <p class="faq-answer">Our AI prompt library is a collection of expert-crafted instructions designed to get the best results from AI tools like ChatGPT, Claude, and Bard. These prompts are specifically optimized for content creation and digital marketing tasks.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I use these prompts?</h3>
+                    <p class="faq-answer">Simply copy the prompt from our library, customize it if needed, and paste it into your preferred AI tool. Our prompts are designed to be clear and specific, ensuring you get high-quality, relevant outputs every time.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I customize the prompts?</h3>
+                    <p class="faq-answer">Yes! Each prompt has customizable parameters that you can adjust to fit your specific needs. Our premium version offers advanced customization options and the ability to save your personalized prompts.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer refunds?</h3>
+                    <p class="faq-answer">We offer a 14-day money-back guarantee on all premium plans. If you're not satisfied with our prompt library, simply contact our support team for a full refund.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">How often do you add new prompts?</h3>
+                    <p class="faq-answer">We add new prompts every month based on user feedback, industry trends, and AI tool updates. Premium and Agency members get immediate access to all new prompts.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I use these prompts for client work?</h3>
+                    <p class="faq-answer">Absolutely! Our Premium plan allows you to use the prompts for your own business and clients. For agencies managing multiple clients, we recommend the Agency plan which includes team access and white-label exports.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Content Creation?</h2>
+                <p class="cta-description">Join thousands of marketers and content creators who are saving hours every week and producing better results with our AI prompt library.</p>
+                <a href="#pricing" class="btn btn-primary">Get Started Today</a>
+            </div>
+        </section>
+    </div>
+    
+    <div class="prompt-modal" id="promptModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            
+            <h2 class="modal-title" id="modalTitle">Prompt Title</h2>
+            <span class="modal-category" id="modalCategory">Category</span>
+            
+            <div class="tabs">
+                <button class="tab active" data-tab="original">Original Prompt</button>
+                <button class="tab" data-tab="customize">Customize</button>
+                <button class="tab" data-tab="about">About This Prompt</button>
+            </div>
+            
+            <div class="tab-content active" data-tab="original">
+                <div class="prompt-text" id="promptText">
+                    Prompt content goes here...
+                </div>
+                
+                <div class="button-group">
+                    <button class="button button-primary" id="copyOriginal">Copy to Clipboard</button>
+                    <button class="button button-secondary" id="showCustomize">Customize This Prompt</button>
+                </div>
+            </div>
+            
+            <div class="tab-content" data-tab="customize">
+                <div class="parameter-form" id="parameterForm">
+                    <!-- Form fields will be dynamically generated here -->
+                </div>
+                
+                <div class="prompt-text" id="customizedText">
+                    Customized prompt will appear here...
+                </div>
+                
+                <div class="button-group">
+                    <button class="button button-primary" id="copyCustomized">Copy Customized Prompt</button>
+                    <button class="button button-secondary" id="updateCustomized">Update</button>
+                </div>
+            </div>
+            
+            <div class="tab-content" data-tab="about">
+                <h3>About This Prompt</h3>
+                <p id="promptDescription">Description goes here...</p>
+                
+                <h3>When to Use</h3>
+                <p id="promptUsage">Usage information goes here...</p>
+                
+                <h3>Example Output</h3>
+                <div class="prompt-text" id="promptExample">
+                    Example output goes here...
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="login-modal" id="loginModal">
+        <div class="login-content">
+            <button class="close-modal" id="closeLoginModal">&times;</button>
+            
+            <h2 class="modal-title">Unlock Premium Content</h2>
+            <p>Sign in or create an account to access premium prompts and features.</p>
+            
+            <div class="login-form">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Your password">
+                </div>
+                
+                <button class="button button-primary" style="width: 100%;">Sign In</button>
+                
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="#" id="showSignup" style="color: var(--primary); text-decoration: none;">Don't have an account? Sign up</a>
+                </div>
+                
+                <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1rem;">
+                    <span style="color: var(--gray);">Or continue with</span>
+                </div>
+                
+                <div class="login-options">
+                    <div class="login-option">Google</div>
+                    <div class="login-option">Facebook</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="success-message" id="successMessage">
+        Copied to clipboard!
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Home</a>
+            <a href="#" class="footer-link">Pricing</a>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">FAQ</a>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Privacy</a>
+        </div>
+        <div class="credit">
+            &copy; 2025 Ultimate AI Prompt Library. All rights reserved.
+        </div>
+    </footer>
